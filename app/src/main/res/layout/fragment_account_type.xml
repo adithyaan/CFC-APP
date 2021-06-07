@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".signup.fragments.AccountTypeFragment">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Welcome,"
+        android:textSize="30sp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:id="@+id/title1"
+        android:textStyle="bold"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please Enter The Below Details To Continue"
+        android:layout_below="@id/title1"
+        android:id="@+id/title2"
+        android:textSize="20sp"
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginTop="10dp"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/org_title"
+        android:layout_below="@id/title2"
+        android:layout_marginTop="20dp"
+        android:text="Who are you?"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:id="@+id/rg"
+        android:layout_below="@id/org_title"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Organisation"
+            android:id="@+id/org_radio"
+            android:drawableLeft="@drawable/ic_baseline_work_24"
+            android:drawablePadding="10dp"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Individual"
+            android:id="@+id/user_radio"
+            android:drawablePadding="10dp"
+            android:drawableLeft="@drawable/ic_baseline_account_circle_24"
+            />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/rg"
+        android:id="@+id/ll"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/organization_view"/>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button_bg"
+        android:textColor="@color/white"
+        android:text="Create Account"
+        android:id="@+id/createBtn"
+        />
+
+</RelativeLayout>
+
+</ScrollView>

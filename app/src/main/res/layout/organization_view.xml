@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/org_title"
+        android:layout_marginTop="20dp"
+        android:text="Organization Type"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:id="@+id/rg"
+        android:layout_below="@id/org_title"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Public"
+            android:drawablePadding="10dp"
+            android:drawableLeft="@drawable/ic_baseline_work_24"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Private"
+            android:drawablePadding="10dp"
+            android:drawableLeft="@drawable/ic_baseline_work_24"
+
+            />
+    </RadioGroup>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/meal_title"
+        android:layout_below="@+id/rg"
+        android:layout_marginTop="20dp"
+        android:text="Meal Type?"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:id="@+id/meal_rg"
+        android:layout_below="@id/meal_title"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Free"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Paid"
+            />
+    </RadioGroup>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/verification_title"
+        android:layout_below="@+id/meal_rg"
+        android:layout_marginTop="20dp"
+        android:text="Choose your preferred verification method?"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:id="@+id/verification_rg"
+        android:layout_below="@id/verification_title"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Free"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Paid"
+            />
+    </RadioGroup>
+</RelativeLayout>

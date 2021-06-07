@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    tools:context=".auth.PhoneNumberActivity">
+
+    <TextView android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Welcome,"
+        android:textSize="30sp"
+        android:layout_marginTop="70dp"
+        android:textColor="@color/black"
+        android:id="@+id/title1"
+        android:textStyle="bold"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please Enter OTP To Continue"
+        android:layout_below="@id/title1"
+        android:id="@+id/title2"
+        android:textSize="20sp"
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginTop="10dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/title2"
+        android:layout_marginTop="30dp"
+        android:hint="OTP"
+        android:padding="10dp"
+        android:inputType="number"
+        android:id="@+id/otp_et"
+
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/otp_et"
+        android:layout_marginTop="40dp"
+        app:backgroundTint="@null"
+        android:background="@drawable/button_bg"
+        android:textColor="@color/white"
+        android:text="VERIFY"
+        android:id="@+id/verify_btn"
+        />
+
+</RelativeLayout>
