@@ -12,15 +12,18 @@
         <activity
             android:name=".home.HomeActivity"
             android:label="@string/title_activity_home"
-            android:theme="@style/Theme.APPCFC.NoActionBar"></activity>
-        <activity android:name=".signup.SignupActivity" />
-        <activity android:name=".auth.OtpActivity" />
-        <activity android:name=".auth.PhoneNumberActivity">
+            android:theme="@style/Theme.APPCFC.NoActionBar">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".signup.SignupActivity" />
+        <activity android:name=".auth.OtpActivity" />
+        <activity android:name=".auth.PhoneNumberActivity">
+
         </activity>
     </application>
 

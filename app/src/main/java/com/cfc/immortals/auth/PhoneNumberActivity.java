@@ -43,32 +43,33 @@ public class PhoneNumberActivity extends AppCompatActivity implements View.OnCli
         switch (view.getId()){
             case R.id.continueBtn:
                 String phoneNumber = getMobileNumber();
+                startActivity(new Intent(this,OtpActivity.class));
 
-                if(phoneNumber.length()>0){
-                    startActivity(new Intent(this,OtpActivity.class));
-                    AuthClient authClient = RetrofitClient.getRetrofitInstance().create(AuthClient.class);
-                    authClient.sendOtp(phoneNumber).enqueue(new Callback<OTPSendResponse>() {
-                        @Override
-                        public void onResponse(Call<OTPSendResponse> call, Response<OTPSendResponse> response) {
-                            if(response.isSuccessful()){
-                                Toast.makeText(PhoneNumberActivity.this, "OTP is Sent", Toast.LENGTH_SHORT).show();
-                            }
-                            else{
-                                try {
-                                    Toast.makeText(PhoneNumberActivity.this, "Error"+response.errorBody().string(), Toast.LENGTH_SHORT).show();
-                                } catch (IOException e) {
-                                    e.printStackTrace();
-                                }
-                            }
-
-                        }
-
-                        @Override
-                        public void onFailure(Call<OTPSendResponse> call, Throwable t) {
-                            Toast.makeText(PhoneNumberActivity.this, "Request Failed"+t.getMessage(), Toast.LENGTH_SHORT).show();
-                        }
-                    });
-                }
+//                if(phoneNumber.length()>0){
+//                    startActivity(new Intent(this,OtpActivity.class));
+//                    AuthClient authClient = RetrofitClient.getRetrofitInstance().create(AuthClient.class);
+//                    authClient.sendOtp(phoneNumber).enqueue(new Callback<OTPSendResponse>() {
+//                        @Override
+//                        public void onResponse(Call<OTPSendResponse> call, Response<OTPSendResponse> response) {
+//                            if(response.isSuccessful()){
+//                                Toast.makeText(PhoneNumberActivity.this, "OTP is Sent", Toast.LENGTH_SHORT).show();
+//                            }
+//                            else{
+//                                try {
+//                                    Toast.makeText(PhoneNumberActivity.this, "Error"+response.errorBody().string(), Toast.LENGTH_SHORT).show();
+//                                } catch (IOException e) {
+//                                    e.printStackTrace();
+//                                }
+//                            }
+//
+//                        }
+//
+//                        @Override
+//                        public void onFailure(Call<OTPSendResponse> call, Throwable t) {
+//                            Toast.makeText(PhoneNumberActivity.this, "Request Failed"+t.getMessage(), Toast.LENGTH_SHORT).show();
+//                        }
+//                    });
+//                }
 
         }
     }
