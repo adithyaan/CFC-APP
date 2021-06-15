@@ -1,11 +1,26 @@
 package com.cfc.immortals.httpclient.dto;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class OTPSendResponse {
+    @JsonIgnore
     @JsonProperty("Status")
     private String status;
     @JsonProperty("Details")
+    @JsonIgnore
     private String response;
+
+    @JsonIgnore
+    @JsonProperty("message")
+    private String message;
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
 
     public String getStatus() {
             return status;

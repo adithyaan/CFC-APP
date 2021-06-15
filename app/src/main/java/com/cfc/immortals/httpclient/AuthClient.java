@@ -10,8 +10,8 @@ import retrofit2.http.Query;
 
 public interface AuthClient {
 
-    @GET("otp/generate")
-    Call<OTPSendResponse> sendOtp(@Query("mobileNumber") String mobileNumber);
+    @GET("sendOTP/")
+    Call<OTPSendResponse> sendOtp(@Query("mobileno") String mobileno);
 
     @GET("otp/verify")
     Call<OTPVerifyResponse> verifyOtp(@Query("mobileNumber") String mobileNumber);

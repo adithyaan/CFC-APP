@@ -7,16 +7,13 @@ import retrofit2.converter.jackson.JacksonConverterFactory;
 
 public class RetrofitClient {
     private static Retrofit retrofit,tokenRetrofit, tempTokenRetrofit;
-    private static final String BASE_URL = "";
+    private static final String BASE_URL = "https://immortals-submission.eu-gb.cf.appdomain.cloud/api/users/";
 
     public static Retrofit getRetrofitInstance() {
         if (retrofit == null) {
             OkHttpClient defaultHttpClient = new OkHttpClient.Builder()
-                    .addInterceptor(chain -> {
-                        Request authorisedRequest = chain.request().newBuilder()
-                                .addHeader("x-api-key", "APP-API-KEY").build();
-                        return chain.proceed(authorisedRequest);
-                    }).build();
+
+                    .build();
             retrofit = new retrofit2.Retrofit.Builder()
                     .baseUrl(BASE_URL)
                     .addConverterFactory(JacksonConverterFactory.create())

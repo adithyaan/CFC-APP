@@ -1,5 +1,6 @@
 package com.cfc.immortals.signup.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.widget.AppCompatButton;
@@ -11,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.cfc.immortals.R;
+import com.cfc.immortals.home.HomeActivity;
 import com.cfc.immortals.signup.SignupActivity;
 
 
@@ -46,7 +48,7 @@ public class AddressFragment extends Fragment implements View.OnClickListener{
         switch (view.getId()){
             case R.id.nextBtn:
                 Toast.makeText(getActivity(), "Clicked", Toast.LENGTH_SHORT).show();
-                ((SignupActivity)getActivity()).transactionFragment(new AccountTypeFragment());
+                startActivity(new Intent(getActivity(), HomeActivity.class));
                 break;
         }
     }

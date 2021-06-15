@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 
 import com.cfc.immortals.R;
+import com.cfc.immortals.signup.fragments.AccountTypeFragment;
 import com.cfc.immortals.signup.fragments.AddressFragment;
 import com.cfc.immortals.signup.fragments.PersonalFragment;
 

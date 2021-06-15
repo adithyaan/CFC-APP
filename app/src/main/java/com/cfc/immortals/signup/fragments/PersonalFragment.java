@@ -27,6 +27,7 @@ public class PersonalFragment extends Fragment {
 
     View root;
     Button nextBtn;
+    DatePicker datePicker;
     public PersonalFragment() {
         // Required empty public constructor
     }
@@ -43,7 +44,10 @@ public class PersonalFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         root= inflater.inflate(R.layout.fragment_personal, container, false);
+        datePicker=root.findViewById(R.id.dobdate);
+        datePicker.setMaxDate(System.currentTimeMillis());
         nextBtn = root.findViewById(R.id.nextBtn);
+
         nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

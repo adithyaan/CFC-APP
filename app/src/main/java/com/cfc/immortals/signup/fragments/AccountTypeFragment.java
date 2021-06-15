@@ -15,6 +15,7 @@ import android.widget.RadioGroup;
 
 import com.cfc.immortals.R;
 import com.cfc.immortals.home.HomeActivity;
+import com.cfc.immortals.signup.SignupActivity;
 
 
 public class AccountTypeFragment extends Fragment implements View.OnClickListener {
@@ -71,9 +72,7 @@ public class AccountTypeFragment extends Fragment implements View.OnClickListene
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.createBtn:
-                startActivity(new Intent(getActivity(), HomeActivity.class
-                ));
-                getActivity().finish();
+                ((SignupActivity)getActivity()).transactionFragment(new PersonalFragment());
 
         }
     }

@@ -19,7 +19,7 @@ import com.cfc.immortals.R;
 import java.util.ArrayList;
 
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment  {
 
     private HomeViewModel homeViewModel;
     private RecyclerView recyclerView;
@@ -42,6 +42,7 @@ public class HomeFragment extends Fragment {
         HomeAdapter adapter = new HomeAdapter(getContext(),new ArrayList());
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
         return root;
     }
 
