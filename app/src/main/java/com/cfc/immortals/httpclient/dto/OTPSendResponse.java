@@ -3,14 +3,10 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class OTPSendResponse {
-    @JsonIgnore
     @JsonProperty("Status")
     private String status;
     @JsonProperty("Details")
-    @JsonIgnore
-    private String response;
-
-    @JsonIgnore
+    private String Details;
     @JsonProperty("message")
     private String message;
 
@@ -30,18 +26,18 @@ public class OTPSendResponse {
             this.status = status;
     }
     public String getResponse() {
-            return response;
+            return Details;
     }
 
-    public void setResponse(String response) {
-            this.response = response;
+    public void setResponse(String Details) {
+            this.Details = Details;
     }
 
         @Override
         public String toString() {
             return "OTPSendResponse{" +
                     "status='" + status + '\'' +
-                    ", response='" + response + '\'' +
+                    ", Details='" + Details + '\'' +
                     '}';
         }
     }

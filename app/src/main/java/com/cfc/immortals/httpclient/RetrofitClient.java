@@ -7,7 +7,7 @@ import retrofit2.converter.jackson.JacksonConverterFactory;
 
 public class RetrofitClient {
     private static Retrofit retrofit,tokenRetrofit, tempTokenRetrofit;
-    private static final String BASE_URL = "https://immortals-submission.eu-gb.cf.appdomain.cloud/api/users/";
+    private static final String BASE_URL = "https://humans-cfc.eu-gb.cf.appdomain.cloud/api/users/";
 
     public static Retrofit getRetrofitInstance() {
         if (retrofit == null) {
